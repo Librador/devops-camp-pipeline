@@ -16,7 +16,6 @@ pipeline {
                 echo "Cloning application repository"
                 sh 'git clone https://github.com/Librador/afs-labs-student.git'
                 dir('afs-labs-student') {
-                    
                 }
                 withCredentials([usernamePassword(credentialsId: 'liturbe-harbor-auth', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     script {
